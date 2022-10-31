@@ -20,7 +20,6 @@ const Login = (props) => {
                 <form onSubmit={loginHandler}>
                     <input 
                         name='email'
-                        id='email'
                         type='email'
                         placeholder='Email'
                         required
@@ -28,7 +27,6 @@ const Login = (props) => {
                     />
                     <input 
                         name='password'
-                        id='password'
                         type='password'
                         placeholder='Password'
                         required
