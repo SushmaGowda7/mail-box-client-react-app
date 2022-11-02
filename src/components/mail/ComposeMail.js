@@ -4,8 +4,8 @@ import { useRef } from 'react';
 import Button from '../UI/Button';
 import classes from './ComposeMail.module.css';
 import { useDispatch } from 'react-redux';
-import { composeActions } from '../../store/compose-reducer';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { composeActions } from '../../store/compose-reducer';
 
 const ComposeMail = () => {
     const emailRef = useRef('');
@@ -32,14 +32,15 @@ const ComposeMail = () => {
             body: content,
             read: false
         }
+
         try {
             const res = await axios.post(
                 `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}.json`,
                 mailDataObj
             );
+            alert('Sent successfully');
             console.log(res);
             dispatch(composeActions.composeMail(userMail));
-            alert('Sent successfully');
         } catch (error) {
             console.log(error);
             alert(error)

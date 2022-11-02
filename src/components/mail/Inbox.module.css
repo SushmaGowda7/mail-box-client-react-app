@@ -10,6 +10,7 @@
 }
 
 .inbox ul{
+    border: 1px solid rgb(119, 117, 117);
     margin: 0;
 }
 
@@ -21,7 +22,6 @@
 
 .inbox li{
     margin: 1rem;
-    line-height: 2rem;
     list-style: decimal;
 }
 
@@ -30,16 +30,17 @@
     background-color: red;
     border: 1px solid lightcoral;
     text-align: center;
-    width: 15%;
+    width: 12%;
     cursor: pointer;
     border-radius: 5px;
     padding: 7px;
     transition: background-color 1s;
     font-size: 15px;
     font-weight: 300;
+    margin-left: 55rem;
 }
 
 .inbox button:hover,
 .inbox button:focus {
-    background-color:rgb(243, 87, 87);
+    background-color: rgb(240, 101, 147);
 }
