@@ -27,9 +27,12 @@ const Inbox = () => {
     }
 
     useEffect(() => {
-        fetchMails();
+        setInterval(() => {
+            fetchMails();
+            console.log('called');
+        }, 2000)
         // eslint-disable-next-line
-    }, []);
+    }, [], 2000);
 
     const singleMailHandler = (mail) => {
         setSingleMail(mail);
