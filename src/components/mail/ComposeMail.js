@@ -4,8 +4,8 @@ import { useRef } from 'react';
 import Button from '../UI/Button';
 import classes from './ComposeMail.module.css';
 import { useDispatch } from 'react-redux';
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { composeActions } from '../../store/compose-reducer';
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 const ComposeMail = () => {
     const emailRef = useRef('');
@@ -43,7 +43,6 @@ const ComposeMail = () => {
             dispatch(composeActions.composeMail(userMail));
         } catch (error) {
             console.log(error);
-            alert(error)
         }
     }
 
