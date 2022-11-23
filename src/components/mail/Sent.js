@@ -45,7 +45,8 @@ const Sent = () => {
                                     <div
                                         onClick={() =>singleMailHandler(mail)}>
                                         <li>
-                                            <span>To: {mails[mail].to}</span>
+                                            <span>To: {mails[mail].to}</span><br />
+                                            <span>Subject: {mails[mail].subject}</span>
                                         </li> 
                                     </div>  
                                     <hr />
