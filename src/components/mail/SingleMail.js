@@ -21,7 +21,7 @@ const SingleMail = (props) => {
         const readMail = async () => {
             try {
                 const res = await axios.put(
-                `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}/${singleMailKey}.json`,
+                `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}Inbox/${singleMailKey}.json`,
                 mails[singleMailKey]
                 )
                 console.log(res);

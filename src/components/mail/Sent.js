@@ -14,7 +14,7 @@ const Sent = () => {
 
         try {
             const res = await axios.get(
-            `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}.json`
+            `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}SentMail.json`
             );
             console.log(res.data);
             const data = res.data;

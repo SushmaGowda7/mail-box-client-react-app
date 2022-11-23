@@ -16,7 +16,7 @@ const Inbox = () => {
     const fetchMails = async () => {
         try {
             const res = await axios.get(
-            `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}.json`
+            `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}Inbox.json`
             );
             console.log(res);
             dispatch(composeActions.fetchMail(res.data))
@@ -41,7 +41,7 @@ const Inbox = () => {
         console.log(mail);
         try {
             const res = await axios.delete(
-            `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}/${mail}.json`
+            `https://mail-box-client-b2189-default-rtdb.firebaseio.com/${userMail}Inbox/${mail}.json`
             );
             console.log(res);
             fetchMails();
